@@ -17,7 +17,7 @@ app.post("/students", (req, res) => {
   if (name && typeof name === "string" && name.trim().length > 0) {
     students.push(name.trim());
 
-    res.send("ok");
+    res.redirect("http://localhost:3000/");
   } else {
     res.status(400).send("Invalid name");
   }
